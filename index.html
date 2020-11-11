@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="./three.js"></script>
+<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+</head>
+<body onmousemove="mouseMoved()">
+
+    <button class="showInfoBtn" onclick="showInfo()">info</button>
+    
+    <video id="video" style="position: absolute; top:0; opacity: 0;"  autoplay muted loop >
+        <source src="./headimages/flowers.mp4" type='video/mp4'>
+    </video>
+    
+    <video id="video2" style="position: absolute; top:0; opacity: 0;"  autoplay muted loop >
+        <source src="./headimages/sky2.mp4" type='video/mp4'>
+    </video>
+    <video id="video3" style="position: absolute; top:0; opacity: 0;"  autoplay muted loop >
+        <source src="./headimages/asfalt.mp4" type='video/mp4'>
+    </video>
+
+        <!-- <audio autoplay id="track1"src="./headimages/barnes/1.mp3"></audio> -->
+        <audio id="track1"src="./headimages/barnes/1.mp3"></audio>
+        <audio id="track2"src="./headimages/barnes/2.mp3"></audio>
+        <audio id="track3"src="./headimages/barnes/3.mp3"></audio>
+        <audio id="track4"src="./headimages/barnes/4.mp3"></audio>
+        <audio id="track5"src="./headimages/barnes/5.mp3"></audio>
+        <audio id="track6"src="./headimages/barnes/6.mp3"></audio>
+        <audio id="track7"src="./headimages/barnes/7.mp3"></audio>
+        <audio id="track8"src="./headimages/barnes/8.mp3"></audio>
+        <audio id="track9"src="./headimages/barnes/9.mp3"></audio>
+        <audio id="track10"src="./headimages/barnes/10.mp3"></audio>
+        <audio id="track11"src="./headimages/barnes/11.mp3"></audio>
+        
+<div class="gridcontainer"></div>
+        <div class="grain"></div>
+
+
+<div class="topbar">
+    <div class="topcontainer">
+    <!-- <button class="hideBtn3">X</button> -->
+    <p class="uppertext">barnes <br>blvd.:</p>
+    </div> 
+</div>
+<img id="smiley" ondrop="dropped()" src="./headimages/y1.png" alt=""/>
+    <div class="underbar">
+        <!-- <button class="hideBtn2">X</button> -->
+        <p class="undertext">This is a web presentation of barnes blvd.: album Last Summer. The tracks can be dragged and dropped around the screen. When You have dropped them you can drag the play button to the cluster you would like to listen to. 
+<br>
+<br>
+            With this album we want to give audio a visual reface and location. The reference lives within the background videos. The location lives within the cordinates in which the track is dropped. </p>
+    </div>
+
+    <div class="infobar">
+        <!-- <button class="hideBtn">X</button> -->
+        <div class="tourdates">
+            <div class="tourdates1">
+            <h4>September 17,<br> Salt Lake City, UT, US The State Room <br>Tickets</h4>
+            <h4>September 16,<br> Garden City, ID, US Visual Arts Collective <br>Tickets</h4>
+            <h4>September 20,<br> Los Angeles, CA, US El Rey Theatre <br>Tickets</h4>
+            <h4>September 19,<br> La Jolla, CA, US San Diego Center<br>Tickets</h4>
+            <h4>September 20,<br> Big Sur, CA, US Fernwood Resort <br>Tickets</h4>
+            <h4>September 21,<br> Big Sur, CA, US Fernwood Resort <br>Tickets</h4>
+            <h4>September 23,<br> San Francisco, CA, US The Chapel <br>Tickets</h4>
+        </div> 
+        <div class="tourdates2">
+            <h4>September 25,<br> San Francisco, CA, US The Chapel <br>Tickets</h4>
+            <h4>October 11,<br> Brooklyn, NY, US Barclays Center <br>Tickets</h4>
+            <h4>September 24,<br> San Francisco, CA, US The Chapel <br>Tickets</h4>
+            <h4>December 22-29<br>Bowery Ballroom (Hanukkah shows)<br>Tickets</h4>
+            <h4>January 1,<br> Durham, NC - Reynolds Industries Theater<br>Tickets</h4>
+            <h4>January 18-22,<br> Rivera Maya, Mexico Wilco's Sky Blue Sky Festival<br>Tickets</h4>
+            </div>
+        
+        
+          </div>
+</div>
+        <div id="dits" class="dits">
+            <div onclick="dotClick(1)" class="dot"><p class="songName">01 intro (w rook1e)e</p></div>
+            <div onclick="dotClick(2)" class="dot"><p class="songName">02 i still don't know who i am</p></div>
+            <div onclick="dotClick(3)" class="dot"><p class="songName">03 in solitude i sometimes find solace</p></div>
+            <div onclick="dotClick(4)" class="dot"><p class="songName">04 i have love for everyone besides myself</p></div>
+            <div onclick="dotClick(5)" class="dot dot2"><p class="songName">05 the perks of being a wallflower</p></div>
+            <div onclick="dotClick(6)" class="dot"><p class="songName">06 joan of arc</p></div>
+            <div onclick="dotClick(7)" class="dot"><p class="songName">07 my friends</p></div>
+            <div onclick="dotClick(8)" class="dot"><p class="songName">08 now, i see</p></div>
+            <div onclick="dotClick(9)" class="dot"><p class="songName">09 sleepy story</p></div>
+            <div onclick="dotClick(10)" class="dot"><p class="songName">10 epilogue</p></div>
+            <div onclick="dotClick(11)" class="dot"><p class="songName">11 bonus ~ last summer</p></div>
+        </div>
+        
+        <div id="container"></div>
+        <div id="container2"></div>
+     
+
+        <script src="./stats.min.js"></script>
+        <script src="./main3.js"></script>
+    </body>
+</html> 
