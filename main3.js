@@ -20,12 +20,6 @@ animate();
 function init() {
 
 
-  var nodes = document.querySelector('#dits').childNodes;
-    for(var i=0; i<nodes.length; i++) {
-     nodes[i].style = "top:"+ Math.random()*(window.innerHeight-40) +"px; left:"+ Math.random()*(window.innerWidth-350) +"px";
-     
-}
-
 
 // document.querySelector(".dot").style = "background-color: yellow;"
 
@@ -282,51 +276,13 @@ function showInfo(){
 
 
 
-      $(".dot").draggable();
-      $("#smiley").draggable();
-      $( ".dot" ).droppable({
-        tolerance: 'touch',
-        drop: function( event, ui ) {
-           $( this )
-           .addClass( "droppedon" )
-           
-           
-          //  .html( "Dropped with a touch!" )
-        }
-     });
+  
+///on drop put all divs in an array. 
+//loop over array. 
+//Check if position x and y is less than -100 or 100 from drop 
+///if it is within zone add to playlist array
 
-  // function dropped(){
-  //   alert("dropped")
-  // }
 
-      document.querySelector("#smiley").ondrop = function(){    alert("dropped")
-    };
 
       
 
-    //   $(function() {
-    //     $("#draggable").draggable();
-    //     $("#droppable").droppable({
-    //         drop: function(event, ui) {
-    //             console.log(event, ui);
-    //             alert('dropped!');
-    //         }
-    //     });
-    // });
-
-    // function trigger_drop() {
-    //     var draggable = $("#draggable").draggable(),
-    //             droppable = $("#droppable").droppable(),
-
-    //             droppableOffset = droppable.offset(),
-    //             draggableOffset = draggable.offset(),
-    //             dx = droppableOffset.left - draggableOffset.left,
-    //             dy = droppableOffset.top - draggableOffset.top;
-
-    //     draggable.simulate("drag", {
-    //         dx: dx,
-    //         dy: dy
-    //     });
-    // }
-
-    // https://codepen.io/arifmahmudrana/pen/ZbxrXv

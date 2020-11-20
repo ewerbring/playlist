@@ -164,7 +164,7 @@ pointer-events: none;
     z-index: 100;
   }
 
-  .dot{
+  .dot, .dot1, .dot2, .dot3{
     color:white;
     position: relative;
     width: 10px;
@@ -304,7 +304,7 @@ margin:20px;
 
 
 #smiley{
-  width: 100px;
+  width: 200px;
   position: absolute;
   top:20px;
   right:70px;
@@ -318,3 +318,14 @@ margin:20px;
   color: lightgray;
   background-color: blue;
 }
+
+.playlistContainer{
+  color: white;
+  /* font-size: 50px; */
+  position: absolute;
+  right:0px;
+  top: 50px;
+  z-index: 100;
+}
+
+h2{font-size: 20px;}
